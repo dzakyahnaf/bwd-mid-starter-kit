@@ -89,6 +89,9 @@ class Paths
     {
         if (isset($_SERVER['VERCEL']) || isset($_ENV['VERCEL'])) {
             $this->writableDirectory = '/tmp';
+            if (!is_dir('/tmp/cache')) @mkdir('/tmp/cache', 0777, true);
+            if (!is_dir('/tmp/logs')) @mkdir('/tmp/logs', 0777, true);
+            if (!is_dir('/tmp/session')) @mkdir('/tmp/session', 0777, true);
         }
     }
 }
