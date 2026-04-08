@@ -67,8 +67,8 @@ Terdapat 5 Entitas beserta hubungan relasinya:
 
 ## 📝 LEMBAR JAWABAN
 
-**Nama:** Dzaky Ahnaf
-**NIM:** [Isi NIM Anda]
+**Nama:** Nabiil Muzhofar Qadafi
+**NIM:** 25120100089
 
 ### 1. Profil Startup
 *   **Nama Startup:** KlinPro Laundry
