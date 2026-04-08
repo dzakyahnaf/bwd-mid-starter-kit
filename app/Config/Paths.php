@@ -49,9 +49,6 @@ class Paths
      *
      * This variable must contain the name of your "writable" directory.
      * The writable directory allows you to group all directories that
-     * need write permission to a single place that can be tucked away
-     * for maximum security, keeping it out of the app and/or
-     * system directories.
      */
     public string $writableDirectory = __DIR__ . '/../../writable';
 
@@ -87,4 +84,11 @@ class Paths
      * value - the directory should not be publicly accessible.
      */
     public string $envDirectory = __DIR__ . '/../../';
+
+    public function __construct()
+    {
+        if (isset($_SERVER['VERCEL']) || isset($_ENV['VERCEL'])) {
+            $this->writableDirectory = '/tmp';
+        }
+    }
 }
